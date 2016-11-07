@@ -23,7 +23,7 @@ ENV DIND_COMMIT 3b5fac462d21ca164b3778647420016315289034
 RUN wget "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind" -O /usr/local/bin/dind \
 	&& chmod +x /usr/local/bin/dind
 
-RUN wget https://github.com/docker/compose/releases/download/1.8.1/docker-compose-Linux-x86_64 -O /usr/local/bin/docker-compose
+RUN wget "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-Linux-x86_64" -O /usr/local/bin/docker-compose
   && chmod +x /usr/local/bin/docker-compose
 COPY dockerd-entrypoint.sh /usr/local/bin/
 
